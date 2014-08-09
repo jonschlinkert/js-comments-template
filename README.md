@@ -3,7 +3,7 @@
 > Default template used by js-comments for generating API docs.
 
 ## Install
-#### [npm](npmjs.org)
+#### Install with [npm](npmjs.org)
 
 ```bash
 npm i js-comments-template --save
