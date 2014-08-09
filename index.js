@@ -13,7 +13,7 @@ exports.readme = [
   '',
   '<% if (comment.title) { %>' +
   '<%= comment.title %>',
-  '<% } %>',
+  '',
   '<%= comment.lead %>',
   '<% _.each(comment.params, function(param) { %>',
   '* `<%= param.name %>` **{<%= param.type %>}**<%= param.description ? ": " : "" %><%= param.description %>' +
@@ -29,6 +29,7 @@ exports.readme = [
   '<% }); %>' +
   '<% } %>' +
   '<%= comment.description %>',
+  '<% } %>',
   '<% }); %>' +
   '<% }); %>' +
   '<% }); %>'
