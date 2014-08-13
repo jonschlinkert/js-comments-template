@@ -12,7 +12,7 @@ exports.readme = [
   '<% _.each(comments, function(comment) { %>' +
   '',
   '<% if (comment.title) { %>' +
-  '<%= comment.title %>',
+  '<%= comment.prefix %> <%= "[" + comment.title + "](" + file.path + "#L" + (comment.end + 2) + ")" %>',
   '',
   '<%= comment.lead %>',
   '<% _.each(comment.params, function(param) { %>',
