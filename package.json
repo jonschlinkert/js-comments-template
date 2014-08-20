@@ -1,7 +1,7 @@
 {
   "name": "js-comments-template",
   "description": "Default template used by js-comments for generating API docs.",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "homepage": "https://github.com/jonschlinkert/js-comments-template",
   "author": {
     "name": "Jon Schlinkert",
@@ -35,6 +35,7 @@
     "parse",
     "readme",
     "repo",
+    "template",
     "verb"
   ],
   "main": "index.js",
