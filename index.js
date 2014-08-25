@@ -5,16 +5,14 @@
  * Licensed under the MIT License (MIT)
  */
 
-
 exports.readme = [
   '<% _.each(files, function(file) { %>' +
-  '<% _.each(file.comments, function(comments) { %>' +
-  '<% _.each(comments, function(comment) { %>' +
+  '<% _.each(file.comments, function(comment) { %>' +
   '',
   '<% if (comment.title) { %>' +
-  '<%= comment.prefix ? comment.prefix : "## " %><%= "[" + comment.title + "](" + file.path + "#L" + (comment.end + 2) + ")" %>',
-  '',
+  '<%= comment.prefix ? comment.prefix + " " : "## " %><%= "[" + comment.title + "](" + file.path + "#L" + (comment.end + 2) + ")" %>',
   '<%= comment.lead %>',
+  '<%= comment.description %>',
   '<% _.each(comment.params, function(param) { %>',
   '* `<%= param.name %>` **{<%= param.type %>}**<%= param.description ? ": " : "" %><%= param.description %>' +
   '  <% if (comment.properties) { %>' +
@@ -25,27 +23,10 @@ exports.readme = [
   '<% }); %>' +
   '<% if (comment.returns && comment.returns.length > 0) { %>' +
   '<% _.each(comment.returns, function(ret) { %>',
-  '* returns<%= ret.type ? " **{" + ret.type + "}**" : "" %><%= ret.name ? " `" + ret.name + "`" : "" %><%= ret.description ? ": " : "" %><%= ret.description %>  ' +
-  '<% }); %>' +
+  '* `returns`<%= ret.type ? " **{" + ret.type + "}**" : "" %><%= ret.name ? " `" + ret.name + "`" : "" %><%= ret.description ? ": " : "" %><%= ret.description %>  ',
+  '<% }); %>',
   '<% } %>' +
-  '<%= comment.description %>',
-  '<% } %>',
-  '<% }); %>' +
+  '<% } %>' +
   '<% }); %>' +
   '<% }); %>'
 ].join('\n');
-
-
-exports.docs = [
-  '<% _.each(files, function(file) { %>',
-  '## [<%= file.name %>](<%= file.path %>)',
-  '<% _.each(file.comments, function(comments) { %>',
-  '<% _.each(comments, function(comment) { %>',
-  '<%= comment.name ? "### [" + comment.name + "](" + file.path + "#L" + (comment.end + 2) + ")": "" %>',
-  '<%= comment.lead %>',
-  '<%= comment.description %>',
-  '<% _.each(comment.params, function(param) { %>',
-  '* `<%= param.name %>`: {<%= param.type %>} <%= param.description %>',
-  '<% }); %> <% }); %> <% }); %> <% }); %>'
-].join('\n');
-
