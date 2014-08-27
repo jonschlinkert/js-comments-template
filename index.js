@@ -18,7 +18,7 @@ exports.readme = [
 
   // params
   '<% _.each(comment.params, function(param) { %>',
-  '* `<%= param.name %>` **{<%= param.type %>}**<%= param.description ? ": " : "" %><%= param.description %>' +
+  '* <% if (param.name) { %>`<%= param.name %>` <% } %>**{<%= param.type %>}**<%= param.description ? ": " : "" %><%= param.description %>' +
 
   '  <% if (param.options) { %>',
   '  <% _.each(param.options, function(option) { %>' +
