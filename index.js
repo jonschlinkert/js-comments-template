@@ -1,13 +1,11 @@
 /*!
  * js-comments-template <https://github.com/jonschlinkert/js-comments-template>
  *
- * Copyright (c) 2014 Jon Schlinkert, contributors
- * Licensed under the MIT License (MIT)
+ * Copyright (c) 2014-2015, Jon Schlinkert.
+ * Licensed under the MIT License.
  */
 
-exports.readme = [
-  '<% _.each(files, function(file) { %>' +
-
+module.exports = [
   // begin comments
   '<% _.each(file.comments, function(comment) { %>',
 
@@ -45,8 +43,5 @@ exports.readme = [
 
   // Description
   '<% if (comment.description) { %><%= "\\n" + comment.description + "\\n" %><% } %>' +
-  '<% }); %>' +
-  // end comments
-  //
   '<% }); %>'
 ].join('\n');
