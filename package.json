@@ -1,7 +1,7 @@
 {
   "name": "js-comments-template",
   "description": "Default template used by js-comments for generating API docs.",
-  "version": "0.5.0",
+  "version": "0.6.3",
   "homepage": "https://github.com/jonschlinkert/js-comments-template",
   "author": {
     "name": "Jon Schlinkert",
@@ -19,15 +19,10 @@
     "url": "https://github.com/jonschlinkert/js-comments-template/blob/master/LICENSE"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "templates/"
   ],
   "main": "index.js",
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
   "keywords": [
     "api",
     "code",
