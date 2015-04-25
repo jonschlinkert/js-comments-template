@@ -11,14 +11,14 @@ module.exports = [
   '* <% if (param.name) { %>`<%= param.name %>` <% } %>**{<%= param.type %>}**<%= param.description ? ": " : "" %><%= param.description %>' +
 
   '  <% if (param.options) { %>',
-  '  <% _.each(param.options, function(option) { %>' +
-  '  - `<%= option.name %>` **{<%= option.type %>}**<%= option.description ? ": " : "" %><%= option.description %>',
-  '  <% }); %>' +
+  '    <% _.each(param.options, function(option) { %>' +
+  '    - `<%= option.name %>` **{<%= option.type %>}**<%= option.description ? ": " : "" %><%= option.description %>',
+  '    <% }); %>' +
   '  <% } %>' +
 
-  '  <% if (param.properties) { %>' +
-  '  <% _.each(param.properties, function(prop) { %>' +
-  '  - `<%= prop.name %>` **{<%= prop.type %>}**<%= prop.description ? ": " : "" %><%= prop.description %>' +
+  '  <% if (param.properties) { %>',
+  '    <% _.each(param.properties, function(prop) { %>' +
+  '    - `<%= prop.name %>` **{<%= prop.type %>}**<%= prop.description ? ": " : "" %><%= prop.description %>',
   '  <% }); %>' +
   '  <% } %>' +
   '<% }); %>'

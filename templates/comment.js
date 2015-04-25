@@ -8,8 +8,10 @@
 module.exports = [
   // title
   '<% if (comment.title) { %>' + include('title') + '<% } %>',
+
   // Description
   '<%= comment.description %>',
+
   // params
   '<% if (comment.params) { %>' + include('params') + '<% } %>',
   // returns
