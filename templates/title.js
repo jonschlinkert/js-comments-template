@@ -7,7 +7,12 @@
 
 module.exports = [
   // prefix
-  '<%= comment.prefix ? (comment.prefix + " ") : "## " %><%= "[" + comment.title + "](" + file.path + "#L" + (comment.end + 2) + ")" %>',
+  '<%= comment.prefix ? (comment.prefix + " ") : "## " %>' +
+  '<% if (file.path) { %>' +
+  '<%= "[" + comment.title + "](" + file.path + "#L" + (comment.end + 2) + ")" %>' +
+  '<% } else { %>' +
+  '<%= comment.title %>' +
+  '<% } %>',
 
   // lead
   '<%= comment.lead ? comment.lead : "" %>'
