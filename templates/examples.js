@@ -8,6 +8,7 @@
 module.exports = [
   '**<%= comment.examples.length > 1 ? "Examples" : "Example" %>**\n',
   '<% _.each(comment.examples, function(example) { %>',
+  '<%= example.description || "" %>',
   '<%= example.block %>',
   '<% }); %>'
 ].join('\n');
