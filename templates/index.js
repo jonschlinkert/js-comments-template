@@ -6,8 +6,7 @@
  */
 
 module.exports = [
-  // begin
   '<% _.each(file.comments, function(comment) { %>',
     require(__dirname + '/comment.js'),
-  '<% }); %>' // end
+  '<% }); %>'
 ].join('\n');

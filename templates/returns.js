@@ -7,7 +7,6 @@
 
 module.exports = [
   '<% _.each(comment.returns, function(ret) { %>' +
-  // '<%= log(ret) %>',
   '* `returns`<%= ret.type ? " **{" + ret.type + "}**" : "" %><%= ret.name ? " `" + ret.name + "`" : "" %><%= ret.description ? ": " : "" %><%= ret.description %>  ',
   '<% }); %>'
 ].join('\n');
