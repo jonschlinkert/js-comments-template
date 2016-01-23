@@ -1,28 +1,22 @@
 {
   "name": "js-comments-template",
-  "description": "Default template used by js-comments for generating API docs.",
-  "version": "0.7.0",
+  "description": "Default template used by js-comments and helper-apidocs for generating API docs.",
+  "version": "0.7.1",
   "homepage": "https://github.com/jonschlinkert/js-comments-template",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/js-comments-template.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/js-comments-template",
   "bugs": {
     "url": "https://github.com/jonschlinkert/js-comments-template/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/jonschlinkert/js-comments-template/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "files": [
     "index.js",
     "templates/"
   ],
   "main": "index.js",
+  "devDependencies": {
+    "gulp-format-md": "^0.1.5"
+  },
   "keywords": [
     "api",
     "code",
@@ -40,5 +34,36 @@
     "repo",
     "template",
     "verb"
-  ]
+  ],
+  "verb": {
+    "live_examples": [
+      "assemble",
+      "base",
+      "base-store",
+      "base-options",
+      "base-tasks",
+      "base-plugins",
+      "base-pipeline",
+      "base-config",
+      "base-cli",
+      "generate",
+      "boilerplate",
+      "scaffold"
+    ],
+    "related": {
+      "list": [
+        "esprima-extract-comments",
+        "extract-comments",
+        "gfm-code-blocks",
+        "helper-apidocs",
+        "js-comments",
+        "parse-code-context",
+        "parse-comments",
+        "verb"
+      ]
+    },
+    "plugins": [
+      "gulp-format-md"
+    ]
+  }
 }
