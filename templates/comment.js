@@ -6,17 +6,19 @@
  */
 
 module.exports = [
-  // title
+  // ## title
   '<% if (comment.title) { %>' + include('title') + '<% } %>',
 
   // Description
   '<%= comment.description %>',
 
-  // params
+  // **params**
   '<% if (comment.params) { %>' + include('params') + '<% } %>',
-  // returns
+  // **returns**
   '<% if (comment.returns) { %>' + include('returns') + '<% } %>',
-  // examples
+  // **events**
+  '<% if (comment.emits) { %>' + include('emits') + '<% } %>',
+  // **examples**
   '<% if (comment.examples.length) { %>' + include('examples') + '<% } %>'
 ].join('\n');
 
