@@ -11,9 +11,12 @@
   "license": "MIT",
   "files": [
     "index.js",
-    "templates/"
+    "templates"
   ],
   "main": "index.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
   "devDependencies": {
     "gulp-format-md": "^0.1.5"
   },
@@ -39,15 +42,15 @@
     "live_examples": [
       "assemble",
       "base",
-      "base-store",
-      "base-options",
-      "base-tasks",
-      "base-plugins",
-      "base-pipeline",
-      "base-config",
       "base-cli",
-      "generate",
+      "base-config",
+      "base-options",
+      "base-pipeline",
+      "base-plugins",
+      "base-store",
+      "base-tasks",
       "boilerplate",
+      "generate",
       "scaffold"
     ],
     "related": {
