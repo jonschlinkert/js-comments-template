@@ -1,7 +1,7 @@
 {
   "name": "js-comments-template",
   "description": "Default template used by js-comments and helper-apidocs for generating API docs.",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "homepage": "https://github.com/jonschlinkert/js-comments-template",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/js-comments-template",
