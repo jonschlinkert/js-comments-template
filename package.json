@@ -18,7 +18,7 @@
     "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "gulp-format-md": "^0.1.5"
+    "gulp-format-md": "^0.1.11"
   },
   "keywords": [
     "api",
@@ -39,6 +39,26 @@
     "verb"
   ],
   "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "esprima-extract-comments",
+        "extract-comments",
+        "gfm-code-blocks",
+        "helper-apidocs",
+        "js-comments",
+        "parse-code-context",
+        "parse-comments",
+        "verb"
+      ]
+    },
     "live_examples": [
       "assemble",
       "base",
@@ -53,20 +73,12 @@
       "generate",
       "scaffold"
     ],
-    "related": {
-      "list": [
-        "esprima-extract-comments",
-        "extract-comments",
-        "gfm-code-blocks",
-        "helper-apidocs",
-        "js-comments",
-        "parse-code-context",
-        "parse-comments",
-        "verb"
-      ]
+    "lint": {
+      "reflinks": true
     },
-    "plugins": [
-      "gulp-format-md"
+    "reflinks": [
+      "verb",
+      "verb-generate-readme"
     ]
   }
 }
