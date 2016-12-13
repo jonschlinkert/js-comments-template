@@ -12,15 +12,14 @@ module.exports = [
   // Description
   '<%= comment.description %>',
 
-  // **examples**
-  '<% if (comment.examples.length) { %>' + include('examples') + '<% } %>',
-
   // **params**
   '<% if (comment.params) { %>' + include('params') + '<% } %>',
   // **returns**
   '<% if (comment.returns) { %>' + include('returns') + '<% } %>',
   // **events**
   '<% if (comment.emits) { %>' + include('emits') + '<% } %>',
+  // **examples**
+  '<% if (comment.examples.length) { %>' + include('examples') + '<% } %>'
 ].join('\n');
 
 function include(name) {
